@@ -10,6 +10,7 @@ pandas = "*"
 numpy = "*"
 ruff = "*"
 joblib = "*"
+scikit-learn = "*"
 
 [dev-packages]
 ipykernel = "*"
