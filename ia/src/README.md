@@ -1,40 +1,32 @@
-# IA/Machine Learning
+# IA/Machine Learning - Iris K-Means Clustering
 
 ## 📝 Descrição
 
-Módulo responsável pelos modelos de Machine Learning, análise exploratória de dados e notebooks de pesquisa.
+Módulo responsável pela análise de clustering K-Means aplicada ao dataset Iris. Este projeto demonstra como algoritmos não supervisionados podem identificar grupos naturais nos dados, comparando os clusters encontrados com as espécies reais das flores.
 
 ## 🚀 Funcionalidades
 
-- Análise exploratória de dados (EDA)
-- Pré-processamento e feature engineering
-- Treinamento de modelos de ML
-- Avaliação e validação de modelos
-- Otimização de hiperparâmetros
-- Notebooks de pesquisa e experimentação
+- Carregamento do dataset Iris do scikit-learn
+- Análise e exploração das características das flores (comprimento/largura de sépalas e pétalas)
+- Pré-processamento com StandardScaler para normalização dos dados
+- Aplicação do algoritmo K-Means com 3 clusters
+- Redução de dimensionalidade com PCA para visualização em 2D
+- Comparação visual entre clusters K-Means e espécies reais
+- Visualização dos centróides dos clusters
 
-## 🛠️ Tecnologias Sugeridas
+## 🛠️ Tecnologias Utilizadas
 
 ### Core ML
-- **Scikit-learn** - Algoritmos de ML tradicionais
-- **XGBoost/LightGBM** - Gradient boosting
-- **TensorFlow/PyTorch** - Deep learning
-- **Statsmodels** - Análises estatísticas
+
+- **Scikit-learn** - Algoritmos de clustering (K-Means), redução de dimensionalidade (PCA) e pré-processamento (StandardScaler)
 
 ### Processamento de Dados
-- **Pandas** - Manipulação de dados
-- **NumPy** - Computação numérica
-- **Polars** - Processamento rápido de dados
+
+- **Pandas** - Manipulação e estruturação dos dados do Iris dataset
 
 ### Visualização
-- **Matplotlib/Seaborn** - Visualizações estáticas
-- **Plotly** - Visualizações interativas
-- **Yellowbrick** - Visualizações para ML
 
-### Experimentação
-- **MLflow** - Tracking de experimentos
-- **Weights & Biases** - Monitoramento de experimentos
-- **Optuna** - Otimização de hiperparâmetros
+- **Matplotlib** - Visualizações dos clusters e comparação com espécies reais
 
 ## 📦 Instalação
 
@@ -50,58 +42,42 @@ source venv/bin/activate  # Linux/Mac
 venv\Scripts\activate     # Windows
 ```
 
-## 📋 Estrutura Sugerida
+## 📋 Estrutura Atual
 
 ```text
 ia/src/
-├── datasets/
-│   ├── data_clean.csv          # Dados limpos
-│   ├── pre_processing.csv/     # Dados pré-processados
-│   └── model.csv/              # Dados prontos para modelagem
 ├── notebooks/
-│   ├── data_clean.ipynb      # Limpeza de dados
-│   └── eda.ipynb             # Análise exploratória
-│   ├── pre_processing.ipynb  # Desenvolvimento de modelos
-│   └── model.ipynb           # Modelagem e avaliação de modelos
-├── models/
-    ├── trained/       # Modelos treinados
-    └── artifacts/     # Artefatos dos modelos
+│   └── project.ipynb          # Análise completa K-Means do dataset Iris
+└── README.md                  # Este arquivo
 ```
 
-## 🔬 Pipeline de ML Sugerido
+## 📊 Notebook Disponível
 
-1. **Coleta de Dados**
-   - Importação e validação
-   - Análise de qualidade dos dados
+- `project.ipynb` - Análise completa de clustering K-Means aplicada ao dataset Iris, incluindo:
+  - Carregamento e exploração dos dados
+  - Pré-processamento com StandardScaler
+  - Aplicação do algoritmo K-Means
+  - Visualização dos resultados com PCA
+  - Comparação entre clusters encontrados e espécies reais
 
-2. **Análise Exploratória**
-   - Estatísticas descritivas
-   - Visualizações
-   - Identificação de padrões
+## 🔬 Pipeline Implementado
 
-3. **Pré-processamento**
-   - Limpeza de dados
-   - Tratamento de valores ausentes
-   - Feature engineering
+1. **Carregamento de Dados**
+   - Importação do dataset Iris via scikit-learn
+   - Estruturação em DataFrame pandas
 
-4. **Modelagem**
-   - Seleção de algoritmos
-   - Treinamento de modelos
-   - Validação cruzada
+2. **Pré-processamento**
+   - Normalização com StandardScaler
+   - Preparação dos dados para clustering
 
-5. **Avaliação**
-   - Métricas de performance
-   - Análise de erros
-   - Interpretabilidade
+3. **Clustering**
+   - Aplicação do K-Means com 3 clusters
+   - Definição de centróides dos clusters
 
-6. **Deployment**
-   - Serialização de modelos
-   - Testes de produção
-   - Monitoramento
+4. **Redução de Dimensionalidade**
+   - Aplicação do PCA para visualização em 2D
+   - Preservação da variância explicada
 
-## 📊 Notebooks Disponíveis
-
-- `data_clean.ipynb` - Limpeza e preparação dos dados
-- `eda.ipynb` - Análise exploratória inicial
-- `pre_processing.ipynb` - Pré-Processamento dos dados
-- `model.ipynb` - Treinamento e avaliação de modelos
+5. **Visualização e Análise**
+   - Gráficos comparativos dos clusters vs espécies reais
+   - Análise da eficácia do clustering não supervisionado
