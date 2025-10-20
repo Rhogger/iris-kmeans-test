@@ -4,12 +4,9 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-seaborn = "*"
-plotly = "*"
 pandas = "*"
-numpy = "*"
+matplotlib = "*"
 ruff = "*"
-joblib = "*"
 scikit-learn = "*"
 
 [dev-packages]
